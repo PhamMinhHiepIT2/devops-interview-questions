@@ -144,13 +144,17 @@ Repository with DevOps interview questions.
 * What is the difference between processes and threads?
 * What is the difference between exec and fork?
 * How nginx can handle a lot of connections? What does it use inside?
-    * Example of answer: Eventloop.
+    * Asynchronous event-driven architecture
+    * Worker processes and worker connections
+    * Efficient resource usage
+    * Caching and load balancing
 * What is "nohup" used for?
 * What is an atomic operation?
 * I've added my public ssh key into authorized_keys but I'm still getting a password prompt, what can be wrong?
 * How do you catch a SIGHUP ? What about SIGSEGV ? What about SIGKILL ?
 * What is the Linux Kernel OOM and how does it work ?
-* What's a chroot jail?
+* What's a chroot jail?<br>
+===> Chroot jail is a way to isolate process and child process. The process in jail cannot access any file and directory out of jail. So, chroot jail can avoid attacker who has gained access to resource.<br>
 * Describe the Linux boot process with as much detail as possible, starting from when the system is powered on and ending when you get a prompt.
 * What's LD_PRELOAD and when is it used?
 * You ran a binary and nothing happened. How would you debug this?
@@ -199,6 +203,10 @@ Repository with DevOps interview questions.
 ## SecOps/Security
 
 * On a newly installed linux machine, what would you change in /etc/ssh/sshd_config?
+  * Disable root login
+  * Change default ssh port
+  * Disable login with password => use public key
+  * Limit ssh access to user/group
 * When would you use the TARPIT iptables target?
 * You notice that the 20 year old web application stores the user's passwords hashed with MD5. How would you migrate to a new hash?
 * You know that a 3rd party website allows googlebot. How would you scrape this website?
